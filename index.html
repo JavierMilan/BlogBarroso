@@ -1,63 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>BarrosoBLOG</title>
-    <link rel="stylesheet" href="barroso.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BarrosoBLOG - Crónicas de un crack</title>
+  <link rel="stylesheet" href="barroso.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="main">
-  <!-- Sección del currículum -->
-  <div class="container">
-    <div class="content">
-      <div class="text">
-        <div class="box">Curriculum Vitae</div>
-        <h2>Nombre: Barroso</h2>
-        <h2>Tlf: solo contesto insta</h2>
-        <h2>Sexo: mucho</h2>
-        <h2>Redes Sociales: @Barroso</h2>
+  <header class="header">
+    <h1>BarrosoBLOG</h1>
+    <p>Historias reales (o casi)</p>
+  </header>
+
+  <main class="main">
+    <section class="perfil">
+      <div class="perfil-texto">
+        <h2>Curriculum Vitae</h2>
+        <p><strong>Nombre:</strong> Barroso</p>
+        <p><strong>Tlf:</strong> Solo contesto Insta</p>
+        <p><strong>Sexo:</strong> Mucho</p>
+        <p><strong>Redes Sociales:</strong> @Barroso</p>
       </div>
-      <img src="inicio.jpg" width="420px" class="fotoInicio">
-    </div>
-  </div>
+      <img src="inicio.jpg" alt="Foto de Barroso" class="foto" />
+    </section>
 
-  <h3>Historicas:</h3>
-  <div class="containerFotoUno">
-    <h1>Cuando la Nancy me dijo que si quería otra copa y le dije: Ponme dos.</h1>
-    <img src="martinica.jpg" width="420px">
-  </div>
+    <h2 class="seccion-titulo">Experiencia</h2>
 
-  <div class="containerFotoDos">
-    <h1>Cuando me pusieron un apercibimiento en el trabajo y le dije a mi jefe: Ponme dos.</h1>
-    <img src="estanco.jpg" width="420px">
-  </div>
+    <section class="historia">
+      <p>Cuando la Nancy me dijo que si quería otra copa y le dije: <em>“Ponme dos.”</em></p>
+      <img src="martinica.jpg" alt="Barroso en la Martinica" />
+    </section>
 
-  <div class="containerFotoTres">
-    <h1>Ese día me aposté con el Ale que me invitaba a dos cervezas si le decía al camarero: Ponme tres cervezas, una pa ti, otra pa mí y otra pa tu puta madre. Me miró con mala leche pero las dos cervezas me las bebí (le pasé foto a Samu de la hazaña).</h1>
-    <img src="desperado.jpg" width="420px">
-  </div>
+    <section class="historia">
+      <p>Cuando me pusieron un apercibimiento en el trabajo y le dije a mi jefe: <em>“Ponme dos.”</em></p>
+      <img src="estanco.jpg" alt="Barroso en el estanco" />
+    </section>
 
-  <div class="containerFotoCuatro">
-    <h1>Ese día intenté lo mismo pero el camarero me dio una ostia.</h1>
-    <img src="cerveza.jpg" width="420px">
-  </div>
+    <section class="historia">
+      <p>
+        Me aposté con el Ale que me invitaba a dos cervezas si le decía al camarero:<br>
+        <em>“Ponme tres cervezas, una pa ti, otra pa mí y otra pa tu puta madre.”</em><br>
+        Me miró con mala leche pero las dos cervezas me las bebí<br>
+         (le pasé foto a Samu de la hazaña).
+      </p>
+      <img src="desperado.jpg" alt="Foto de las cervezas" />
+    </section>
 
-  <div class="containerFotoCinco">
-    <h1>
-      Aprendí la lección y decidí dejar de beber alcohol, así que ese día le dije al camarero:<br>
-      Hoy solamente quiero 2 cafés. Uno para mí y otro pa tu puta madre, para ti no que te pones muy nervioso.<br>
-      Así que vida sana sanita.
-    </h1>
-    <img src="sano.jpg" width="420px">
-  </div>
+    <section class="historia">
+      <p>Intenté lo mismo otro día... pero el camarero me dio una ostia.</p>
+      <img src="cerveza.jpg" alt="Barroso y la cerveza" />
+    </section>
 
-  <div class="containerFotoSeis">
-    <h1>Ese día no me apetecía café así que me dije a mí mismo: Un día es un día.</h1>
-    <img src="piscina.jpg" width="420px">
-  </div>
+    <section class="historia">
+      <p>
+        Aprendí la lección y decidí dejar el alcohol. Le dije al camarero:<br>
+        <em>“Hoy solo quiero 2 cafés. Uno pa mí y otro pa tu puta madre.”</em><br>
+        Vida sana sanita.
+      </p>
+      <img src="sano.jpg" alt="Barroso con café" />
+    </section>
+
+    <section class="historia">
+      <p>Ese día no me apetecía café, así que me dije: <em>“Un día es un día.”</em></p>
+      <img src="piscina.jpg" alt="Barroso en la piscina" />
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 BarrosoBLOG - Sigue mi camino en @Barroso</p>
+  </footer>
+  <div id="anuncio" class="anuncio">
+  <img src="hombres.jpg" alt="Publicidad de Barroso" />
+  <button id="cerrarAnuncio">✖</button>
 </div>
+<script>
+  setTimeout(() => {
+    const anuncio = document.getElementById("anuncio");
+    anuncio.style.display = "block";
+  }, 10000); // 15 segundos
 
-   
+  document.getElementById("cerrarAnuncio").addEventListener("click", () => {
+    document.getElementById("anuncio").style.display = "none";
+  });
+</script>
+
 </body>
 </html>
